@@ -15,14 +15,18 @@ const sliderImage = [
 
 const itemsContainer = document.querySelector(".items-container")
 
-for(let i = 0; i <sliderImage.length; i++){
+for(let i = 0; i < sliderImage.length; i++){
     const thisImg = sliderImage[i]
-    const element = ` 
+    const element = `
         <div class="item">
             <img src="${thisImg}" alt="">
-        </div>`
+        </div>`;
     itemsContainer.innerHTMl += element
     console.log(thisImg)
 }
 
 // start
+
+const items = document.getElementsByClassName("item");
+let sliderPosition = 0;
+items[sliderPosition].classList.add("active");
